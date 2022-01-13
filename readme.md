@@ -1,5 +1,5 @@
-## Tic Tac Toe  
-# A variation of the classic game using minMax algorithm (tree Search)
+# Tic Tac Toe  
+##  A variation of the classic game using minMax algorithm (tree Search)
 
 ## Check [demo](https://jesus-fhz.github.io/tic-tac-toe/) 
 

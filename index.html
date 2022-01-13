@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="mainContainer">
+    <div class="container2">
+        <h1>Tic Tac Toe</h1> 
+    </div>
+    <div class="container2">
+       <input type="text" placeholder="Player1" class="playersName"  value="Player 1" id="player1"> 
+       <span id='scoreP1'>0</span>: <span id="scoreP2">0</span>
+       <input type="text" placeholder="Player2" class="playersName"  value="Player 2" id="player2"> 
+       
+    </div>
+    <div class="container2">
+        <h3>Change Board Size</h3>
+        <input type="range" min="3" max="10" value="3" class="boardSize" id="boardSize">
+        <div id="showSize" ></div>
+        <input type="button" value="New Game" id="restartGame" >
+        <input type="checkbox" id="ai" name="ai">
+      <label for="scales">Ai</label>
+    </div>
+    <div class="container">
+        <div class="game-board">
+        </div>
+    </div>
+    <div class="container2">
+        <h1 class="display"></h1> 
+    </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+<script src="js/dom.js"></script>
+</body>
+</html>

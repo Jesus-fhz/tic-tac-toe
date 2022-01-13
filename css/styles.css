@@ -1,0 +1,91 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    background-color:#1D3557 ;
+    overflow: hidden;
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: seashell;
+    
+}
+
+.container2 input{
+   margin: 0 10px;
+}
+.game-board
+{   
+    min-width: 450px;
+    min-height: 450px;
+    color: #fff;
+    border-radius: 10px;
+	display: grid;
+    position: relative;
+}
+
+.box{
+  display: flex;
+  margin: 6px;
+  border-radius: 10px;
+  background-color:#457b9d;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ;
+  
+}
+
+.box:hover{
+    background-color:#393939;
+    cursor: pointer;
+}
+
+.players{
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.restart{
+    left: 100px
+}
+@media only screen and (max-width: 600px) {
+   
+    .game-board {
+        min-width: 300px;
+        min-height: 300px;
+        max-width: 300px !important;
+    }
+
+    .players{
+        font-size: 25px;
+       
+    }
+
+    .container2{
+        flex-direction: column;
+    }
+   
+}

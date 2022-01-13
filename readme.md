@@ -15,7 +15,7 @@ It's a variation of the game Tic Tac Toe, where you can also change size of the 
 ## Features:
 - Classic game functionality
 - Size of the board is customizable
-- Human vs *AI*
+- Human vs *AI* (Unbeatable btw)
 - Keeping scores
 - Playe's name customizable
 - Restart game without updating page

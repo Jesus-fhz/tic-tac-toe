@@ -8,9 +8,9 @@ It's a variation of the game Tic Tac Toe, where you can also change size of the 
 
 ## Tech
 
-- [HTML] 
-- [CSS]
-- [JavaScript]
+- HTML
+- CSS
+- Vanilla Javascript
 
 ## Features:
 - Classic game functionality

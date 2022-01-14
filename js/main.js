@@ -21,7 +21,6 @@ let gameState = [];
 //Creating size of board
 const createBoard = function(size) {
   gameState = [...Array(size)].map(_ => Array(size).fill(null));
-  console.log(gameState);
   return gameState;
 };   
 

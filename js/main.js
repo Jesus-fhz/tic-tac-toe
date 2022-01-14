@@ -20,10 +20,10 @@ let gameState = [];
 
 //Creating size of board
 const createBoard = function(size) {
-
   gameState = [...Array(size)].map(_ => Array(size).fill(null));
+  console.log(gameState);
   return gameState;
-};
+};   
 
 //Check board horizontal
 const checkHorizontal = function(state, symbol) {
@@ -71,13 +71,13 @@ const isItDraw = function(state) {
   return draw
 }
 
-
 //Check if game is finish checking all posibles ways of winning
 const gameOver = function(state, turn) {
   if (checkHorizontal(state, turn) || checkVertical(state, turn) || leftDdiagonal(state, turn) || rightDiagonal(state, turn)) {
       return turn;
   }
 }
+
 
 //We try to find the best move, we select one position of the array and we call the minMax function to check
 //The outcomes of that move, based on the score returned we fill that position of the 2D array.
@@ -88,7 +88,7 @@ function calcMoveAI(gameState) {
       for (let j = 0; j < gameState[i].length; j++) {
           if (gameState[i][j] === null) {
               gameState[i][j] = players.p2.option;
-              const currentScore = minimax(gameState, 0, false);
+              const currentScore = minimax(gameState,false);
               gameState[i][j] = null;
               if (currentScore > keepingScore) {
                   keepingScore = currentScore;
@@ -120,7 +120,7 @@ function minimax(gameState, maxPlayer, depth = 0) {
           for (let j = 0; j < gameState[i].length; j++) {
               if (gameState[i][j] == null) {
                   gameState[i][j] = players.p2.option; //AI/MaxPlayer
-                  const curentScore = minimax(gameState, false, depth + 1);
+                  const curentScore = minimax(gameState, false);
                   gameState[i][j] = null;
                   if (curentScore > keepingScore) {
                       keepingScore = curentScore;
@@ -135,7 +135,7 @@ function minimax(gameState, maxPlayer, depth = 0) {
           for (let j = 0; j < gameState[i].length; j++) {
               if (gameState[i][j] == null) {
                   gameState[i][j] = players.p1.option; //MinPlayer
-                  const curentScore = minimax(gameState, true, depth + 1);
+                  const curentScore = minimax(gameState, true);
                   gameState[i][j] = null;
                   if (curentScore < keepingScore) {
                       keepingScore = curentScore;

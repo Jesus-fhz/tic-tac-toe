@@ -10,8 +10,6 @@ let mainState;
 players.p1.name = document.querySelector("#player1").value; //Default value
 players.p2.name = document.querySelector("#player2").value; //Default value
 
-
-
 const generateBoard = function(number) {
     selectNames();
     const size = createBoard(number);
@@ -27,7 +25,6 @@ const generateBoard = function(number) {
         }
     }
 }
-
 
 const skynet = function() {
     document.querySelectorAll(".box")
@@ -45,6 +42,7 @@ const skynet = function() {
                         aiCell.innerText = turn;
                         gameState[aiMoves[0]][aiMoves[1]] = turn;
                     }
+                    console.log(gameState);
                     checkState(gameState);
                     turn = players.p1.option;
                 }
@@ -67,6 +65,7 @@ const getState = function(){
     }));
 } 
 
+//Set Names
 const selectNames = function() {
     const option = document.querySelectorAll(".playersName");
     option.forEach((option) => option.addEventListener("change", function() {
@@ -77,6 +76,7 @@ const selectNames = function() {
     }));
 }
 
+//Handle winner/tie and reset game and set points
 const handleGame = function(turn, draw) {
     let winner;
     if (draw) {
@@ -95,11 +95,13 @@ const handleGame = function(turn, draw) {
     resetGame();
 }
 
+//Check state of current game
 const checkState = function(gameState) {
     if (gameOver(gameState, turn)) return handleGame(turn);
     if (isItDraw(gameState)) return handleGame(turn, true);
 }
 
+//Change Board Size
 const changeBoardSize = function() {
     const showValue = document.querySelector("#showSize");
     showValue.innerHTML = minSizeBoard.value;
@@ -112,6 +114,7 @@ const changeBoardSize = function() {
 
 }
 
+//Reset Game function
 const resetGame = function() {
     const restart = document.querySelector("#restartGame")
     restart.addEventListener("click", function() {
@@ -120,8 +123,6 @@ const resetGame = function() {
         mainState();
         containerBox.style.pointerEvents = "";
         display.innerHTML = "";
-        scoreP1.innerText = players.p1.points;
-        scoreP2.innerHTML = players.p2.points;
     })
 }
 

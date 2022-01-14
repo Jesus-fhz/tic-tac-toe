@@ -28,7 +28,6 @@ It's a variation of the game Tic Tac Toe, where you can also change size of the 
 
 
 ## Wishlist
-- Allo user to chose Symbol.
 - Add more fancy ui features. 
 
 
